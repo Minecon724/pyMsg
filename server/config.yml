@@ -1,0 +1,42 @@
+net:
+  host: '0.0.0.0'
+  port: 3456
+
+commands:
+  nc:
+    enable: true
+    aliases: []
+  nick:
+    enable: true
+    aliases: ['n']
+  register:
+    enable: true
+    aliases: ['reg']
+  help:
+    enable: true
+    aliases: ['h']
+  leave:
+    enable: true # This option won't do anything as you can't disable the /leave command
+    aliases: ['quit', 'q']
+  room:
+    enable: true
+    aliases: []
+
+security:
+  ip_whitelist: []
+  max_msg_size: 512
+
+misc:
+  default_room: 'lobby'
+  save_accs_in: 'accounts'
+  default_name_color: 'white'
+  motd:
+  - 'Welcome %u'
+  - 'Online: %o'
+  - 'Type /help for help'
+  help:
+  - '/leave - leave the server'
+  - '/nick <name> (password) - Change your nickname. Password is only required if the account is registered.'
+  - '/register <password> - Register your current username.'
+  - '/nc - Change your nickname color'
+  - '/room <room> - switch room'
